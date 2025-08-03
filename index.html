@@ -2,20 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mood-Based Music Recommender</title>
-  <link rel="stylesheet" href="styles.css" />
+
+  <!-- ✅ Load working face-api.js version -->
+  <script defer src="https://cdn.jsdelivr.net/npm/@vladmandic/face-api/dist/face-api.min.js"></script>
+  <script defer src="script.js"></script>
+
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      margin-top: 100px;
+      background-color: #f4f4f4;
+    }
+    video {
+      display: none;
+    }
+    #recommendation {
+      font-size: 20px;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
-  <h1>🎵 Mood-Based Music Recommender</h1>
-  <p>Select your mood:</p>
-  <button onclick="recommendMusic('happy')">😊 Happy</button>
-  <button onclick="recommendMusic('sad')">😢 Sad</button>
-  <button onclick="recommendMusic('angry')">😡 Angry</button>
-  <button onclick="recommendMusic('relaxed')">😌 Relaxed</button>
-
-  <h2 id="recommendation"></h2>
-
-  <script src="script.js"></script>
+  <h1>Mood-Based Music Recommender</h1>
+  <p id="recommendation">Detecting mood...</p>
 </body>
 </html>
